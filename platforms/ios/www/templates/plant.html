@@ -1,0 +1,46 @@
+<ion-view title="{{vegetable.Name}}">
+  	<ion-content class="has-header">
+  		
+		<div class="item item-text-wrap img {{vegetable.image}}" >
+		</div>
+		<ul class="list vegDetail">
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input type="checkbox" ng-model="vegetable.inGarden" ng-click="addOrRemoveFromGarden(vegetable.Id)">
+				</label>
+				<span class="checkboxLabel">
+					Plant in Garden
+				</span>
+			</li>
+			<li class="item item-icon-left">
+				<i class="icon ion-ios7-calendar"></i>
+				Days to Harvest: {{vegetable.DaystoHarvest}}
+			</li>
+			<li class="item item-icon-left">
+				<i class="icon ion-leaf"></i>
+				Plants Per Person: {{vegetable.Plantsperperson}}
+			</li>
+			<li class="item item-icon-left">
+				<i class="icon ion-ios7-calculator"></i>
+				Estimated Production in lbs: {{vegetable.EstimatedProductioninlbs}}
+			</li>
+			<li class="item item-icon-left">
+				<i class="icon ion-code-working"></i>
+				Spacing (inches): {{vegetable.Spacing}}
+			</li>
+			<li class="item item-icon-left">
+				<i class="icon ion-ios7-download"></i>
+				Planting Depth (inches): {{vegetable.PlantingDepth}}
+			</li>
+			<li class="item item-icon-left">
+				<i class="icon ion-ios7-bookmarks"></i>
+				Varieties: {{vegetable.Varieties}}
+			</li>
+			<li class="item item-icon-left">
+				<i class="icon ion-clipboard"></i>
+				Special Notes: {{vegetable.SpecialNotes}}
+			</li>
+		</ul>
+	</ion-content>
+</ion-view>
+ 

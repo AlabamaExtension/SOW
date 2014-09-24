@@ -1,0 +1,66 @@
+<ion-view title="Settings">
+ <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+
+  </ion-nav-buttons>
+  	<ion-content class="has-header">
+
+  	 <button ng-click="openPopover()">Open Popover</button>
+  	<div class="list">
+
+ <div class="list" >
+<h3>Select your state</h3>
+  <label class="item item-radio">
+    <input type="radio" name="group"  ng-checked="false" ng-model="state.name" value="AL" ng-click="Albtn()">
+    <div class="item-content">
+     Alabama
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+
+  </label>
+    <label class="item item-radio">
+    <input type="radio" name="group"  ng-model="state.name" value="FL" ng-click="Flbtn()">
+    <div class="item-content">
+      Flordia
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+    
+  </label>
+    <label class="item item-radio">
+    <input type="radio" name="group" ng-model="state.name" value="OT" ng-click="Olbtn()">
+    <div class="item-content">
+      Other
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+    
+  </label>
+
+
+
+</div>
+{{state}}
+<div class="list" ng-show="showSelect">
+<h3>Select your county</h3>
+  <label class="item item-radio" ng-repeat="item in Counties">
+    <input type="radio" name="group2"  ng-checked="false"ng-model="state.county" value="{{item.Value}}" >
+    <div class="item-content">
+       {{item.Name}}
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+
+  
+
+  
+
+</div>
+ 
+  
+  
+
+</div>
+
+
+
+
+  	</ion-content>
+ </ion-view>

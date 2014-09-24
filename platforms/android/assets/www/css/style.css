@@ -1,0 +1,307 @@
+/* Empty. Add your own CSS if you like */
+@media only screen and (min-width: 1045px) {
+    .card {
+        margin-left:1%;
+        margin-right:1%;
+        width: 31.3%;
+	}
+	.card:last-of-type {
+		margin-right:1%;
+	}
+	.card:odd {
+	    margin-right:.5%;
+	}
+	.card:even {
+	    margin-left:.5%;
+	    margin-right: .5%;
+	}
+}
+@media only screen and (min-width: 575px) and (max-width: 1045px) {
+    .card {
+        margin-left:1%;
+        margin-right:1%;
+        width: 47%;
+	}
+	.card:odd {
+	    margin-right:.5%;
+	}
+	.card:even {
+	    margin-left:.5%;
+	}
+}
+@media only screen and (max-width: 575px) {
+    .card{
+        margin-left:3%;
+        margin-right:3%;
+		width: 94%;
+	}
+}
+
+.howTo
+	{
+		margin-top: 20px;
+		margin-left: 10px;
+		font-family: 'Lato', sans-serif;
+    	font-weight: 200;
+  		font-size: 18px;
+	}
+.card-divider-color
+	{
+		background-color: #2ecc71;
+		border-color: #2ecc71;
+		color: #ecf0f1;
+
+	}
+
+.bar-energizedMenu {
+		border-color: #d39211;
+		background-color: #F5CC76;
+		background-image: linear-gradient(0deg, #d39211, #d39211 50%, transparent 50%);
+		color: #fff;
+		}
+
+.card {
+	border-bottom:1px solid  #AAA;
+	padding:0px;
+	margin-top:10px;
+	margin-bottom:10px;
+	overflow:hidden;
+	float:none;
+	display:inline-block;
+}
+.item-text-wrap{
+	height: 200px;
+}
+.vegDetail *{
+	white-space: normal !important;
+}
+.vegDetail span.checkboxLabel {
+    margin-left:-5px;
+}
+.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
+    /*white-space: normal;*/
+}
+.vegCard i {
+    font-size: 500%;
+    margin-right:5px;
+    background-color: white;
+    border-radius: 9999px;
+    padding: 0px 15px;
+    opacity: .95;
+}
+.card h3{
+		margin:0px;
+		padding:10px;
+		padding-bottom:0px;
+		position:absolute;
+		bottom:0px;
+		left: 0px;
+		width:100%;
+		color:white;
+		background:rgba(0,0,0,0.25);
+		margin:0px;
+		padding:6px;
+		border:none;
+		font-family: 'Lato', sans-serif;
+		font-weight: 200;
+		text-shadow: 0 0px 0;
+		text-align: center;	
+    	font-size: 18px;
+}
+.item-divider {
+		background-color: transparent;
+}
+
+.Center{
+		margin: 0 auto;
+}
+
+
+
+.image1 {
+		background-image:url('../img/Asparagus.jpg');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+}
+.image2 {
+		background-image:url('../img/SnapBeans.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+        
+}
+.image3 {
+		background-image:url('../img/LimaBeans.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+        
+}
+.image4 {
+    background-image:url('../img/Beets.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image6 {
+    background-image:url('../img/Brussellsprouts.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image7 {
+    background-image:url('../img/Cabbage.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.image8 {
+    background-image:url('../img/Canteloupe.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image9 {
+    background-image:url('../img/Carrots.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image10 {
+    background-image:url('../img/Cauliflower2.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image11 {
+    background-image:url('../img/Celery.jpg');
+   
+}
+.image12 {
+    background-image:url('../img/ChineseCabbage.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image13 {
+    background-image:url('../img/Collard.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image14 {
+    background-image:url('../img/Corn.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image15 {
+    background-image:url('../img/Cucumber.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image16 {
+    background-image:url('../img/Eggplant.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image17 {
+    background-image:url('../img/Kale.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image18 {
+    background-image:url('../img/Kohlrabi.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image19 {
+    background-image:url('../img/LettuceLeaf.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image20 {
+    background-image:url('../img/Mustard.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image21 {
+    background-image:url('../img/Okra.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image22 {
+    background-image:url('../img/Onions.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image23 {
+    background-image:url('../img/PeaSweet.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image24 {
+    background-image:url('../img/SouthernPea.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image25 {
+    background-image:url('../img/Peppers.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image26 {
+    background-image:url('../img/WhitePotatoes.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image27 {
+    background-image:url('../img/SweetPotatoe.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image28 {
+    background-image:url('../img/Pumpkin.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image29 {
+    background-image:url('../img/Radishes.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image30 {
+    background-image:url('../img/Spinach.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image31 {
+    background-image:url('../img/SummerSquash.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image32 {
+    background-image:url('../img/WinterSquash.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image33 {
+    background-image:url('../img/Strawberries.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image34 {
+    background-image:url('../img/Tomatoes.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image35 {
+    background-image:url('../img/Turnips.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image36 {
+    background-image:url('../img/Watermelon.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image37 {
+    background-image:url('../img/Broccoli.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image38 {
+    background-image:url('../img/swisschard.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

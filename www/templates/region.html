@@ -1,0 +1,90 @@
+<ion-view title="Settings">
+ <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+
+  </ion-nav-buttons>
+  	<ion-content class="has-header">
+
+  	
+  	<div class="list">
+
+ <div class="list" >
+<h3>Select your state</h3>
+  <label class="item item-radio">
+    <input type="radio" name="group"  ng-checked="false" ng-model="state.name" value="AL" ng-click="Albtn()">
+    <div class="item-content">
+     Alabama
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+
+  </label>
+    <label class="item item-radio">
+    <input type="radio" name="group"  ng-model="state.name" value="FL" ng-click="Flbtn()">
+    <div class="item-content">
+      Florida
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+    
+  </label>
+    <label class="item item-radio">
+    <input type="radio" name="group" ng-model="state.name" value="OT" ng-click="Olbtn()">
+    <div class="item-content">
+      Other
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+    
+  </label>
+
+
+
+</div>
+
+
+
+<h3>Select your state</h3>
+  <div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      County
+    </div>
+    <select  ng-model="state.county">
+         <option ng-repeat="item in Counties "value="{{item.Value}}">{{item.Name}}</option>
+    </select>
+  </label>
+
+</div>
+{{state}}
+
+<!--<div class="list" ng-show="showSelect">
+<h3>Select your county</h3>
+  <label class="item item-radio" ng-repeat="item in Counties">
+    <input type="radio" name="group2"  ng-checked="false"ng-model="state.county" value="{{item.Value}}" >
+    <div class="item-content">
+       {{item.Name}}
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+
+  
+
+  
+
+</div>-->
+  
+   
+
+</div>
+<button class="button button-light" ng-click='saveRegion()'>
+ save
+</button>
+<button class="button button-light" ng-click='removeRegion()'>
+ remove
+</button>
+<button class="button button-light" ng-click='alertRegion()'>
+  alert
+</button>
+
+
+
+  	</ion-content>
+ </ion-view>
