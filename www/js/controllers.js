@@ -205,7 +205,11 @@ angular.module('starter.controllers', [])
 })
 
 //<<<<<<< HEAD
-            .controller("ZipController", function($scope) {
+
+         
+
+    .controller("ZipController", function($scope) {
+//>>>>>>> origin/master
                 $scope.zip = {};
 				
 				
