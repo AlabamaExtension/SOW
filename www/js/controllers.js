@@ -204,7 +204,7 @@ angular.module('starter.controllers', [])
   
 })
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
             .controller("ZipController", function($scope) {
                 $scope.zip = {};
 				
@@ -271,11 +271,11 @@ angular.module('starter.controllers', [])
 			)
 }});
 	})
-=======
+//=======
 .controller('BrowseCtrl', function($scope,  Vegetables) {  
   $scope.AllVegetables = Vegetables.today();
 })
->>>>>>> origin/master
+//>>>>>>> origin/master
 .controller('RegionCtrl', function($scope,   Vegetables, countyList, localStorageService) {  
 
       $scope.showSelect = "false";
