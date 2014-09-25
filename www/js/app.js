@@ -105,17 +105,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
           controller: "GardenCtrl"
         }
       }
-    })
-    .state('app.market', {
-      url: "/market",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/market.html",
-          controller: "MarketCtrl"
-        }
-      }
     });
-	
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/planttoday');
 });

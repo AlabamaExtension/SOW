@@ -3,7 +3,7 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope) {
 })
 
-.controller('PlantTodayCtrl', function($scope, $rootScope, $ionicPlatform, $http, $location, $ionicSlideBoxDelegate, Vegetables, Garden) {
+.controller('PlantTodayCtrl', function($scope, $rootScope, $ionicPlatform, $http, $location, $ionicSlideBoxDelegate, localStorageService, Vegetables, Garden) {
    $scope.addOrRemoveFromGarden = function(id) {
     if(Garden.inGarden(id)) {
       Garden.removeFromGarden(id);
@@ -17,13 +17,185 @@ angular.module('starter.controllers', [])
     $scope.go = function(url) {
       $location.path(url);
     };
+
+   // $scope.region = angular.fromJson(region);
+      var myRegion = angular.fromJson(localStorageService.get("region")) || [];
+      //console.log(myRegion)
+      console.log(myRegion.zone)
+
+      var a = new Date ()
+      var b = a.getMonth() + ""+ a.getDate();
+      
+      Date.prototype.getDOY = function() {
+      var onejan = new Date(this.getFullYear(),0,1);
+      return Math.ceil((this - onejan) / 86400000);
+      }
+
+      var today = new Date();
+      var daynum = today.getDOY();
+      //console.log(daynum)
+
+      console.log(myRegion.zone.substring(0,1))
+
+     
+
       $rootScope.vegList= Vegetables.today();
+
+      var todayItems = []
+
+      
+      
+      if (myRegion.state == "FL") {
+
+          var veggies = Vegetables.florida()
+          var vegArray = Vegetables.florida();
+      }
+      else if (myRegion.state == "AL"){
+        var veggies = Vegetables.today()
+        var vegArray = Vegetables.today();
+
+      }
+      
+
+
+      
+      //console.log(vegArray)
+      var lengthEmptyArray = vegArray.length; 
+
+     for (var i = 0; i < lengthEmptyArray; i++){
+         spring = 151;
+             
+
+        switch(myRegion.zone.substring(0,1)) {
+        case 'n':
+            if(daynum < spring) {
+             
+              var firstday = veggies[i].Regions.North.SpringFirst;
+              var lastday = veggies[i].Regions.North.SpringLast;
+
+              }
+            else {
+              var firstday= veggies[i].Regions.North.FallFirst;
+              var lastday = veggies[i].Regions.North.FallLast;
+            }
+        break;
+        case 'c':
+            if(daynum < spring) {
+              var firstday = veggies[i].Regions.Central.SpringFirst;
+              var lastday = veggies[i].Regions.Central.SpringLast;
+            }
+            else {
+              var firstday= veggies[i].Regions.Central.FallFirst;
+              var lastday = veggies[i].Regions.Central.FallLast;
+            }
+        break;
+        case 's':
+            if(daynum < spring) {
+                var firstday = veggies[i].Regions.South.SpringFirst;
+                var lastday = veggies[i].Regions.South.SpringLast;
+
+            }
+            else {
+              var firstday= veggies[i].Regions.South.FallFirst;
+              var lastday = veggies[i].Regions.South.FallLast;
+            
+
+            }
+             // console.log("its fall yall")
+               // var firstday = $rootScope.vegList.Regions.South.FallFirst;
+                //var lastday = $rootScope.vegList.Regions.South.FallLast;
+            
+        break;
+                       
+          
+          }
+
+          if(firstday <= daynum && daynum <= lastday){
+        
+                todayItems.push(veggies[i])
+                
+                $scope.TodayItems = todayItems
+            }
+         
+        }
+         // console.log(firstday)
+
+          //if(firstday <= daynum && daynum <= lastday){
+        
+            //}
+        
+
+
+     
+
+      //console.log(firstday)
+
+
+      /*switch(myRegion.zone.substring(0,1)) {
+        case 'n':
+            if(daynum < spring) {
+                var firstday = term.Regions.North.SpringFirst;
+                var lastday = term.Regions.North.SpringLast;
+            }
+            else {
+                var firstday = term.Regions.North.FallFirst;
+                var lastday = term.Regions.North.FallLast;
+            }
+        break;
+        case 'c':
+            if(daynum < spring) {
+                var firstday = term.Regions.Central.SpringFirst;
+                var lastday = term.Regions.Central.SpringLast;
+            }
+            else {
+                var firstday = term.Regions.Central.FallFirst;
+                var lastday = term.Regions.Central.FallLast;
+            }
+        break;
+        case 's':
+            if(daynum < spring) {
+                var firstday = term.Regions.South.SpringFirst;
+                var lastday = term.Regions.South.SpringLast;
+            }
+            else {
+                var firstday = term.Regions.South.FallFirst;
+                var lastday = term.Regions.South.FallLast;
+            }
+        break;
+      }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      //alert(today)
+
+    /* $scope.$on.testFilter = function(){
+      if (myRegion.zone = "north") {
+        $rootScope.vegList= Vegetables.today();
+      }
+      else{
+        $rootScope.vegList = null;
+      };}
+      
     //navigator.geolocation.getCurrentPosition(function(position) {
 
-        $rootScope.$apply(function() {
+       /* $rootScope.$apply(function() {
            $rootScope.vegList = Vegetables.getEligible($rootScope.lastFrost, $rootScope.nextFrost).sort();
          
-        });
+        });*/
       //});
     });
   })
@@ -32,6 +204,7 @@ angular.module('starter.controllers', [])
   
 })
 
+<<<<<<< HEAD
             .controller("ZipController", function($scope) {
                 $scope.zip = {};
 				
@@ -98,6 +271,11 @@ angular.module('starter.controllers', [])
 			)
 }});
 	})
+=======
+.controller('BrowseCtrl', function($scope,  Vegetables) {  
+  $scope.AllVegetables = Vegetables.today();
+})
+>>>>>>> origin/master
 .controller('RegionCtrl', function($scope,   Vegetables, countyList, localStorageService) {  
 
       $scope.showSelect = "false";
@@ -139,12 +317,12 @@ var region = []
 
 $scope.saveRegion = function(){
   window.localStorage.clear()
-  window.localStorage['didTutorial'] = true;
+ // window.localStorage['didTutorial'] = true;
   //window.localStorage['region']= angular.toJson($scope.state);
   region = ({'state': $scope.state['name'], 'zone': $scope.state['county'] })
 
-  window.localStorage['region'] = angular.toJson(region);
-
+  //window.localStorage['region'] = angular.toJson(region);
+localStorageService.add("region", angular.toJson(region))
 }
 $scope.removeRegion = function(){
   window.localStorage.clear()
@@ -168,6 +346,8 @@ $scope.alertRegion = function(){
     }
       $scope.garden = Garden.get();
   };
+
+
   $scope.vegetable = Vegetables.get($stateParams.vegetableId);
   $scope.garden = Garden.get();
 })
