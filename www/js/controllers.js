@@ -32,9 +32,39 @@ angular.module('starter.controllers', [])
   
 })
 
-.controller('BrowseCtrl', function($scope,  Vegetables) {  
-  $scope.AllVegetables = Vegetables.today();
-})
+            .controller("ZipController", function($scope) {
+                $scope.zip = {};
+				
+				
+				
+				
+				$scope.myForm.submitTheForm = function(item, event) {
+       console.log("--> Submitting form");
+       var dataObject = {
+          name : $zip
+          ,car  : $zip
+       };
+
+       var responsePromise = $http.post("/angularjs-examples/json-test-data.jsp", dataObject, {});
+       responsePromise.success(function(dataFromServer, status, headers, config) {
+          console.log(dataFromServer.title);
+       });
+        responsePromise.error(function(data, status, headers, config) {
+          alert("Submitting form failed!");
+       });
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+            } )
+
 .controller('MarketCtrl', function($scope, $http, $ionicPopup) {  
 
 	$http.get('http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=36832').success(function(data1){

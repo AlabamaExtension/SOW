@@ -6,7 +6,6 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'LocalStorageModule'])
 
-
 .run(function($ionicPlatform, $rootScope, Vegetables, Garden, localStorageService) {
   if(localStorageService.get("garden") != null) {
     Garden.updateGarden(localStorageService.get("garden"));
